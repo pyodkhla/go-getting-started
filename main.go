@@ -1,11 +1,11 @@
 package main
 
 import (
-	//"log"
-	//"net/http"
+	"log"
+	"net/http"
 	"os"
 
-	//"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 	_ "github.com/heroku/x/hmetrics/onload"
 	"fmt"
 )
@@ -13,9 +13,9 @@ import (
 func main() {
 	port := os.Getenv("PORT")
 
-	fmt.Println("Port:",port)
+	log.Fatal("Port:",port)
 
-	/*if port == "" {
+	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
 
@@ -28,6 +28,6 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
-	router.Run(":" + port)*/
+	router.Run(":" + port)
 
 }
