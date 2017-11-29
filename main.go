@@ -3,17 +3,15 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
+	//"os"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/heroku/x/hmetrics/onload"
-	"fmt"
 )
 
 func main() {
-	port := os.Getenv("PORT")
-
-	fmt.Println("Port:",port)
+	//port := os.Getenv("PORT")
+	port := ""
 
 	if port == "" {
 		log.Fatal("$PORT must be set")
